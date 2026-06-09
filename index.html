@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indonesia Travel Guide — The Emerald Archipelago</title>
+  <meta name="description" content="Complete Indonesia travel guide. Explore Bali, Java, Sumatra, Komodo, and more. Tips, itineraries, costs, and the best places to visit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero { position: relative; height: 100vh; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; }
+    .hero .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+    .hero .overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,10,20,0.8) 0%, rgba(10,10,20,0.3) 50%); z-index: 1; }
+    .hero .hero-content { position: relative; z-index: 2; padding: 20px; max-width: 800px; }
+    .hero .hero-badge { display: inline-block; background: rgba(5,150,105,0.15); border: 1px solid rgba(5,150,105,0.3); padding: 8px 24px; border-radius: 50px; font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; color: #34d399; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(42px, 7vw, 80px); font-weight: 900; line-height: 1.05; margin-bottom: 16px; }
+    .hero h1 .highlight { background: linear-gradient(135deg, #059669, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero .subtitle { font-size: clamp(15px, 1.8vw, 20px); font-weight: 300; color: rgba(255,255,255,0.8); margin-bottom: 28px; line-height: 1.6; }
+    .hero .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .hero .scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 6px; color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; animation: float 2.5s ease-in-out infinite; }
+    .hero .scroll-indicator .line { width: 1px; height: 30px; background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent); }
+    @keyframes float { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+
+    .dest-card { position: relative; border-radius: 16px; overflow: hidden; height: 320px; cursor: pointer; }
+    .dest-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+    .dest-card:hover img { transform: scale(1.06); }
+    .dest-card .dest-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,20,0.8) 0%, transparent 50%); display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
+    .dest-card .dest-overlay h3 { color: #fff; font-size: 22px; font-weight: 600; }
+    .dest-card .dest-overlay p { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 4px; }
+    .dest-card .dest-overlay .btn { margin-top: 12px; align-self: flex-start; }
+
+    .featured-dests { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+
+    .cta-section { background: #059669; text-align: center; padding: 60px 20px; color: #fff; }
+    .cta-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 40px); margin-bottom: 12px; }
+    .cta-section p { font-size: 16px; opacity: 0.9; margin-bottom: 24px; }
+    .cta-section .btn { background: #fff; color: #059669; font-size: 15px; padding: 14px 36px; }
+    .cta-section .btn:hover { background: #f0fdf4; transform: translateY(-2px); }
+
+    @media (max-width: 768px) {
+      .dest-card { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Indo<span>nesia</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="pages/bali.html">Bali</a></li>
+    <li><a href="pages/java.html">Java</a></li>
+    <li><a href="pages/sumatra.html">Sumatra</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg" style="background-image: url('images/mount-bromo.jpg');"></div>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">The Ultimate Travel Guide</div>
+    <h1>Explore the <span class="highlight">Emerald Archipelago</span></h1>
+    <p class="subtitle">From the temples of Java to the dragons of Komodo &mdash; your complete guide to Indonesia</p>
+    <div class="hero-cta">
+      <a href="#destinations" class="btn btn-primary">Explore Destinations</a>
+      <a href="#blog" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Travel Tips</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="section-dark">
+  <div class="section-inner" style="padding: 50px 40px;">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num">17K+</div><div class="label">Islands</div></div>
+      <div class="stat-card"><div class="num">6</div><div class="label">UNESCO Sites</div></div>
+      <div class="stat-card"><div class="num">130+</div><div class="label">Active Volcanoes</div></div>
+      <div class="stat-card"><div class="num">740+</div><div class="label">Languages</div></div>
+      <div class="stat-card"><div class="num">5,120km</div><div class="label">Archipelago Width</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DESTINATIONS ===== -->
+<section id="destinations" class="section-light">
+  <div class="section-inner">
+    <span class="section-tag reveal">Destinations</span>
+    <h2 class="section-title reveal">Where to <span class="highlight">Go</span></h2>
+    <p class="section-desc reveal">Indonesia has something for every traveller. Here are the must-visit islands and regions.</p>
+
+    <div class="featured-dests">
+      <a href="pages/bali.html" class="dest-card reveal reveal-delay-1" style="text-decoration:none;">
+        <img src="images/bali-rice.jpg" alt="Bali" loading="lazy">
+        <div class="dest-overlay">
+          <h3>Bali</h3>
+          <p>Temples, rice terraces, surfing, nightlife</p>
+          <span class="btn btn-primary btn-sm">Explore Bali</span>
+        </div>
+      </a>
+      <a href="pages/java.html" class="dest-card reveal reveal-delay-2" style="text-decoration:none;">
+        <img src="images/borobudur.jpg" alt="Java" loading="lazy">
+        <div class="dest-overlay">
+          <h3>Java</h3>
+          <p>Borobudur, Bromo, Yogyakarta, Jakarta</p>
+          <span class="btn btn-primary btn-sm">Explore Java</span>
+        </div>
+      </a>
+      <a href="pages/sumatra.html" class="dest-card reveal reveal-delay-3" style="text-decoration:none;">
+        <img src="images/orangutan.jpg" alt="Sumatra" loading="lazy">
+        <div class="dest-overlay">
+          <h3>Sumatra</h3>
+          <p>Orangutans, Lake Toba, Padang food</p>
+          <span class="btn btn-primary btn-sm">Explore Sumatra</span>
+        </div>
+      </a>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;" class="reveal">
+      <p style="font-size:14px;color:#888;">More guides coming soon: Lombok, Komodo, Sulawesi, Raja Ampat</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY INDONESIA ===== -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="split">
+      <div class="text-white reveal">
+        <span class="section-tag">Why Indonesia?</span>
+        <h2 class="section-title">Unmatched <span class="highlight">Diversity</span></h2>
+        <p class="section-desc">Nowhere else on Earth packs so much variety into one country. Volcanoes, rainforests, coral reefs, ancient temples, and hundreds of unique cultures &mdash; all in one archipelago.</p>
+        <ul class="fact-list">
+          <li><strong>Cheapest travel</strong> in Southeast Asia &mdash; $30-50/day budget</li>
+          <li><strong>Year-round destination</strong> &mdash; dry season Apr-Oct</li>
+          <li><strong>Visa-free</strong> for 169 countries (30 days)</li>
+          <li><strong>English</strong> widely spoken in tourist areas</li>
+          <li><strong>Incredible food</strong> &mdash; #1 cuisine in the world (CNN)</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <img src="images/komodo-dragon.jpg" alt="Komodo dragon" class="split-img" style="min-height:300px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG PREVIEW ===== -->
+<section id="blog" class="section-light">
+  <div class="section-inner">
+    <span class="section-tag reveal">Travel Blog</span>
+    <h2 class="section-title reveal">Indonesia <span class="highlight">Travel Tips</span></h2>
+    <p class="section-desc reveal">Practical guides to help you plan the perfect trip.</p>
+
+    <div class="card-grid">
+      <div class="blog-card reveal reveal-delay-1">
+        <img src="images/bali-rice.jpg" alt="Bali travel" loading="lazy">
+        <div class="body">
+          <div class="date">Travel Guide</div>
+          <h3>Bali on a Budget — Complete 2025 Guide</h3>
+          <p>How to experience Bali for $40/day without missing the best temples, beaches, and rice terraces.</p>
+          <a href="pages/blog/bali-itinerary.html">Read More &rarr;</a>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-2">
+        <img src="images/kelimutu.jpg" alt="Best time to visit" loading="lazy">
+        <div class="body">
+          <div class="date">Planning</div>
+          <h3>Best Time to Visit Indonesia — Month by Month</h3>
+          <p>Weather patterns, festival seasons, and the best months for each island and activity.</p>
+          <a href="pages/blog/best-time-to-visit.html">Read More &rarr;</a>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-3">
+        <img src="images/mount-bromo.jpg" alt="Mount Bromo" loading="lazy">
+        <div class="body">
+          <div class="date">Guide</div>
+          <h3>How to Visit Mount Bromo — Costs & Tips</h3>
+          <p>Everything you need to know about the iconic sunrise trek, tour prices, and transport from Surabaya or Yogyakarta.</p>
+          <a href="pages/blog/best-time-to-visit.html">Read More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <h2>Ready to Explore Indonesia?</h2>
+  <p>Start planning your trip with our detailed destination guides</p>
+  <a href="#destinations" class="btn">Browse Destinations</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">Indo<span>nesia</span></div>
+  <div class="footer-divider"></div>
+  <p>The Emerald Archipelago — Complete Travel Guide</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="pages/bali.html">Bali</a>
+    <a href="pages/java.html">Java</a>
+    <a href="pages/sumatra.html">Sumatra</a>
+    <a href="index.html#blog">Blog</a>
+  </div>
+  <div class="footer-divider"></div>
+  <p style="font-size:12px;color:rgba(255,255,255,0.3);">Made by <strong style="color:#34d399;">ADHITHYA J</strong></p>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => revealObs.observe(el));
+</script>
+
+</body>
+</html>
