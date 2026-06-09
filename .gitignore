@@ -9,3 +9,14 @@ Thumbs.db
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# Unrelated projects in same directory
+/indonesia.html
+/kerala.html
+/kerala_images/
+/Kanyakumari-Website/
+/TerminalVault/
+/TerminalVault.apk
+
+# Binaries
+*.exe
