@@ -160,6 +160,58 @@ footer .footer-links a:hover { color: #34d399; }
 .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
 .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
 
+/* ===== ACCORDION ===== */
+.accordion { margin: 20px 0; }
+.accordion-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; margin-bottom: 10px; overflow: hidden; transition: box-shadow 0.3s; }
+.accordion-item:hover { box-shadow: 0 4px 20px rgba(5,150,105,0.06); }
+.accordion-header { width: 100%; padding: 18px 24px; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; color: #1a1a2e; text-align: left; transition: color 0.3s; }
+.accordion-header:hover { color: #059669; }
+.accordion-header .icon { font-size: 18px; transition: transform 0.3s; color: #059669; }
+.accordion-item.active .accordion-header .icon { transform: rotate(45deg); }
+.accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 24px; }
+.accordion-item.active .accordion-body { max-height: 300px; padding: 0 24px 18px; }
+.accordion-body p { font-size: 14px; line-height: 1.7; color: #666; }
+.text-white .accordion-item { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
+.text-white .accordion-header { color: #fff; }
+.text-white .accordion-body p { color: rgba(255,255,255,0.7); }
+
+/* ===== ETIQUETTE BOX ===== */
+.etiquette-box { background: #f0fdf4; border-radius: 12px; padding: 20px 24px; margin: 12px 0; border-left: 4px solid #059669; }
+.etiquette-box h4 { color: #059669; font-size: 14px; margin-bottom: 6px; }
+.etiquette-box p { font-size: 13px; color: #555; line-height: 1.6; }
+.text-white .etiquette-box { background: rgba(255,255,255,0.04); border-left-color: #34d399; }
+.text-white .etiquette-box h4 { color: #34d399; }
+.text-white .etiquette-box p { color: rgba(255,255,255,0.7); }
+
+/* ===== MONTH TABLE ===== */
+.month-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0; }
+.month-cell { text-align: center; padding: 12px 6px; border-radius: 10px; font-size: 12px; font-weight: 500; }
+.month-cell .month-name { font-weight: 600; margin-bottom: 4px; }
+.month-cell .month-temp { font-size: 11px; color: #888; }
+.month-cell.great { background: #d1fae5; color: #065f46; }
+.month-cell.good { background: #fef3c7; color: #92400e; }
+.month-cell.ok { background: #fce7f3; color: #9d174d; }
+.text-white .month-cell.great { background: rgba(5,150,105,0.2); color: #34d399; }
+.text-white .month-cell.good { background: rgba(245,158,11,0.2); color: #fbbf24; }
+.text-white .month-cell.ok { background: rgba(219,39,119,0.2); color: #f472b6; }
+
+/* ===== BUDGET TABLE ===== */
+.budget-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0; }
+.budget-card { background: #fff; border-radius: 12px; padding: 20px; text-align: center; border: 1px solid #e5e7eb; transition: transform 0.3s; }
+.budget-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(5,150,105,0.08); }
+.budget-card .tier { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.budget-card .amount { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #059669; margin-bottom: 4px; }
+.budget-card .per { font-size: 12px; color: #888; margin-bottom: 12px; }
+.budget-card ul { list-style: none; font-size: 13px; color: #555; line-height: 2; }
+.budget-card.budget .tier { color: #059669; }
+.budget-card.mid .tier { color: #f59e0b; }
+.budget-card.mid { border-color: #fef3c7; }
+.budget-card.luxury .tier { color: #f43f5e; }
+.budget-card.luxury { border-color: #fce7f3; }
+.text-white .budget-card { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
+.text-white .budget-card ul { color: rgba(255,255,255,0.6); }
+.text-white .budget-card .per { color: rgba(255,255,255,0.4); }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   nav { padding: 12px 20px; }
